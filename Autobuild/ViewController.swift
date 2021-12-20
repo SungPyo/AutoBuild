@@ -13,6 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("viewDidLoad")
+        print("푸시만 하면 됨.")
     }
 }
 
