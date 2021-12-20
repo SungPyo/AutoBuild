@@ -19,5 +19,20 @@ platform :ios do
   desc "Description of what the lane does"
   lane :testBuild do
 	puts("testBuild 입니다ㅏㅏㅏㅏㅏㅏㅏㅏ")
+  # Xcode 버전 선택
+  xcode_select("/Applications/Xcode.app")
+  # 클린
+  clean_build_artifacts
+  # 앱 빌드
+  gym(
+    scheme: "AutoBuild",
+    clean: true,
+    output_directory: "./fastlane",
+    destination: "generic/platform=iOS Simulator",
+    configuration: "Debug",
+    skip_package_ipa: true,
+    skip_archive: true,
+  )
+
   end
 end
